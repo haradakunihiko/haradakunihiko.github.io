@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "variant": "junior-high-english",
+  "contentVersion": "2026-02-25.1",
+  "contentsZip": "contents/current.zip",
+  "categoryGroups": [
+    {
+      "group": "english",
+      "groupName": "中一英語",
+      "groupIconKey": "text.book.closed.fill",
+      "categories": ["present","past","futureWill","futureGoingTo","presentProgressive","can","imperativeLets","questionWords"]
+    },
+    {
+      "group": "endOfYear",
+      "groupName": "学年末テスト",
+      "groupIconKey": "graduationcap.fill",
+      "categories": ["etPastBe","etPastGeneral","etPastProgressive","etFutureWill","etFutureGoingTo","etVocabulary","etWordOrder"]
+    }
+  ]
+}
