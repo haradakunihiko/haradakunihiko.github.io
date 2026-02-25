@@ -8,7 +8,7 @@
       "group": "hyakunin",
       "groupName": "百人一首",
       "groupIconKey": "character.book.closed.fill",
-      "categories": ["hyakunin1to10","hyakunin11to20","hyakunin21to30","hyakunin31to40","hyakunin41to50","hyakunin51to60","hyakunin61to70","hyakunin71to80","hyakunin81to90"]
+      "categories": ["hyakunin1to10","hyakunin11to20","hyakunin21to30","hyakunin31to40","hyakunin41to50","hyakunin51to60","hyakunin61to70","hyakunin71to80"]
     }
   ]
 }
