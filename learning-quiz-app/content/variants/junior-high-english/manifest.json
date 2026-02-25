@@ -7,7 +7,7 @@
     {
       "group": "english",
       "groupName": "中一英語",
-      "groupIconKey": "text.book.closed.fill",
+      "groupIconKey": "character.book.closed.fill",
       "categories": ["present","past","futureWill","futureGoingTo","presentProgressive","can","imperativeLets","questionWords"]
     },
     {

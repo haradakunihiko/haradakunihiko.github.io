@@ -7,13 +7,13 @@
     {
       "group": "english",
       "groupName": "中一英語",
-      "groupIconKey": "text.book.closed.fill",
+      "groupIconKey": "character.book.closed.fill",
       "categories": ["present","past","futureWill","futureGoingTo","presentProgressive","can","imperativeLets","questionWords"]
     },
     {
       "group": "hyakunin",
       "groupName": "百人一首",
-      "groupIconKey": "character.book.closed.fill",
+      "groupIconKey": "text.book.closed.fill",
       "categories": ["hyakunin1to10","hyakunin11to20","hyakunin21to30","hyakunin31to40","hyakunin41to50","hyakunin51to60","hyakunin61to70","hyakunin71to80","hyakunin81to90","hyakunin91to100"]
     },
     {
