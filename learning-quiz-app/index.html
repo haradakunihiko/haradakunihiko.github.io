@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百人一首 効率暗記クイズ - サポート公式サイト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .gradient-bg {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+        .app-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-green {
+            background-color: #4ade80;
+            color: #064e3b;
+            transition: all 0.3s ease;
+        }
+        .btn-green:hover {
+            background-color: #22c55e;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen">
+
+    <!-- ナビゲーション -->
+    <nav class="container mx-auto px-6 py-8 flex justify-between items-center">
+        <div class="text-2xl font-bold tracking-tighter">百人一首<span class="text-green-400">暗記</span></div>
+        <div class="hidden md:flex space-x-8 text-sm text-slate-400">
+            <a href="#features" class="hover:text-white transition">特徴</a>
+            <a href="#support" class="hover:text-white transition">サポート</a>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション -->
+    <header class="container mx-auto px-6 pt-12 pb-12 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-12 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                苦手な歌を自動で見つけて<br>
+                <span class="text-green-400">効率よく暗記。</span>
+            </h1>
+            <p class="text-lg text-slate-400 mb-8 max-w-lg">
+                苦手な歌を自動で見つけて優先出題。上の句から下の句を選ぶクイズで、百人一首を効率よく暗記できます。定着度トラッキングで覚えた歌・苦手な歌が一目瞭然。
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#" class="btn-green px-8 py-3 rounded-2xl font-bold text-lg flex items-center shadow-lg shadow-green-900/20">
+                    App Store でダウンロード
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- 特徴セクション -->
+    <section id="features" class="bg-slate-900/50 py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16">アプリの3つの強み</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="app-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">苦手優先モード</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        直近の回答履歴から苦手な歌を自動判定し、間違えやすい歌を優先的に出題。効率よく暗記を進められます。
+                    </p>
+                </div>
+                <div class="app-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-green-500/20 text-green-400 rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">定着度トラッキング</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        繰り返し正解した歌を「定着」として記録。各グループの定着率が一目でわかり、学習の進み具合を把握できます。
+                    </p>
+                </div>
+                <div class="app-card p-8 rounded-3xl">
+                    <div class="w-12 h-12 bg-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">丁寧な解説</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        すべての選択肢に解説付き。現代語訳や背景、単語の意味も学べるので、暗記だけでなく深い理解が得られます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ターゲット層 -->
+    <section class="container mx-auto px-6 py-24 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-12 text-green-400">こんな方におすすめ</h2>
+            <div class="flex flex-wrap justify-center gap-4 text-lg">
+                <span class="bg-slate-800 px-6 py-3 rounded-full border border-slate-700">🎓 古典の授業やテスト対策に</span>
+                <span class="bg-slate-800 px-6 py-3 rounded-full border border-slate-700">🎴 百人一首を趣味で楽しみたい方</span>
+                <span class="bg-slate-800 px-6 py-3 rounded-full border border-slate-700">⚡ 効率よく暗記を進めたい方</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- サポート・コンタクト -->
+    <section id="support" class="bg-slate-800/30 py-24 border-t border-slate-700/50">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">サポート・お問い合わせ</h2>
+            <div class="app-card p-8 rounded-3xl">
+                <p class="text-slate-400 mb-6 leading-relaxed text-center">
+                    アプリの不具合、改善要望、その他のお問い合わせについては以下の方法でご連絡ください。
+                </p>
+                <p class="text-slate-500 text-sm text-center">お問い合わせフォームは準備中です。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="py-12 text-center text-slate-500 text-sm border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-center space-x-6 mb-8" id="privacy">
+                <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                <a href="#" class="hover:text-white transition">利用規約</a>
+            </div>
+            <p>&copy; 2026 百人一首 効率暗記クイズ. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
