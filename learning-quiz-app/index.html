@@ -29,6 +29,13 @@
             background-color: #22c55e;
             transform: translateY(-2px);
         }
+        .carousel-scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .carousel-scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
     </style>
 </head>
 <body class="gradient-bg min-h-screen">
@@ -42,23 +49,99 @@
         </div>
     </nav>
 
-    <!-- ヒーローセクション -->
-    <header class="container mx-auto px-6 pt-12 pb-12 flex flex-col md:flex-row items-center">
-        <div class="md:w-1/2 mb-12 md:mb-0">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-                苦手な歌を自動で見つけて<br>
-                <span class="text-green-400">効率よく暗記。</span>
-            </h1>
-            <p class="text-lg text-slate-400 mb-8 max-w-lg">
-                苦手な歌を自動で見つけて優先出題。上の句から下の句を選ぶクイズで、百人一首を効率よく暗記できます。定着度トラッキングで覚えた歌・苦手な歌が一目瞭然。
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#" class="btn-green px-8 py-3 rounded-2xl font-bold text-lg flex items-center shadow-lg shadow-green-900/20">
-                    App Store でダウンロード
-                </a>
+    <!-- スクリーンショット -->
+    <section id="screenshots" class="pt-6 pb-24 border-t border-slate-800 bg-slate-900/30">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-700 bg-slate-900/60 text-sm text-slate-300 mb-5">
+                    <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                    画面イメージ
+                </div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                    実際の画面を見ながら、<br>
+                    <span class="text-green-400">使い方をイメージ。</span>
+                </h1>
+                <p class="text-lg text-slate-400 max-w-3xl">
+                    クイズ回答・不正解時の解説・テスト結果・定着度トラッキングまで、アプリの流れがわかる画面をそのままの比率で掲載しています。
+                </p>
+                <div class="flex flex-wrap gap-3 mt-6 text-sm">
+                    <span class="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-200">上の句 → 下の句クイズ</span>
+                    <span class="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-200">解説で復習</span>
+                    <span class="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-200">定着度トラッキング</span>
+                </div>
+                <div class="mt-8">
+                    <a href="#" class="btn-green px-8 py-3 rounded-2xl font-bold text-lg inline-flex shadow-lg shadow-green-900/20">
+                        App Store でダウンロード
+                    </a>
+                </div>
+            </div>
+            <div class="lg:hidden flex items-center justify-center mb-4">
+                <div id="screenshots-dots" class="flex items-center gap-2"></div>
+            </div>
+            <div class="relative">
+                <div class="lg:hidden pointer-events-none absolute inset-y-0 left-0 w-12 flex items-center justify-start pl-2 z-10">
+                    <div class="w-8 h-8 rounded-full border border-slate-600/70 bg-slate-900/50 backdrop-blur text-slate-200 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.78 15.53a.75.75 0 01-1.06 0l-5-5a.75.75 0 010-1.06l5-5a.75.75 0 111.06 1.06L8.31 10l4.47 4.47a.75.75 0 010 1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="lg:hidden pointer-events-none absolute inset-y-0 right-0 w-12 flex items-center justify-end pr-2 z-10">
+                    <div class="w-8 h-8 rounded-full border border-slate-600/70 bg-slate-900/50 backdrop-blur text-slate-200 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M7.22 4.47a.75.75 0 011.06 0l5 5a.75.75 0 010 1.06l-5 5a.75.75 0 11-1.06-1.06L11.69 10 7.22 5.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+                <div id="screenshots-carousel" class="flex gap-0 overflow-x-auto overflow-y-hidden snap-x snap-mandatory scroll-smooth carousel-scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible">
+                <div class="app-card rounded-3xl p-4 min-w-full w-full shrink-0 snap-start lg:min-w-0 lg:w-auto">
+                    <div class="rounded-2xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950">
+                        <img src="./images/quiz_statistic.png" alt="定着度トラッキング画面のスクリーンショット" class="w-full h-[26rem] md:h-[31rem] object-contain object-top">
+                    </div>
+                    <div class="mt-4 px-1">
+                        <p class="font-medium">定着度トラッキング</p>
+                        <p class="text-xs text-slate-400 mt-2">覚えた歌と苦手な歌の進捗を一覧で確認。学習の偏りを見ながら進められます。</p>
+                        <div class="mt-3 rounded-2xl bg-slate-900/70 border border-slate-700 p-3">
+                            <p class="text-slate-400 text-[11px] mb-1">ポイント</p>
+                            <p class="text-sm font-medium text-green-300">苦手の自動抽出と定着度の見える化</p>
+                            <p class="text-[11px] text-slate-500 mt-1">優先出題で復習しながら、進捗も一覧で把握</p>
+                        </div>
+                    </div>
+                </div>
+
+                <figure class="app-card rounded-3xl p-4 min-w-full w-full shrink-0 snap-start lg:min-w-0 lg:w-auto">
+                    <div class="rounded-2xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950">
+                        <img src="./images/quiz_fail.png" alt="不正解時の解説表示画面" class="w-full h-[26rem] md:h-[31rem] object-contain object-top">
+                    </div>
+                    <figcaption class="mt-4 px-1">
+                        <p class="font-medium">不正解時の解説</p>
+                        <p class="text-xs text-slate-400 mt-2">選択結果と正解、解説をその場で確認して、間違えた歌をすぐに覚え直せます。</p>
+                        <div class="mt-3 rounded-2xl bg-slate-900/70 border border-slate-700 p-3">
+                            <p class="text-slate-400 text-[11px] mb-1">ポイント</p>
+                            <p class="text-sm font-medium text-red-300">誤答と正答を並べて確認</p>
+                            <p class="text-[11px] text-slate-500 mt-1">解説付きで復習をその場で完結</p>
+                        </div>
+                    </figcaption>
+                </figure>
+
+                <figure class="app-card rounded-3xl p-4 min-w-full w-full shrink-0 snap-start lg:min-w-0 lg:w-auto">
+                    <div class="rounded-2xl overflow-hidden border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950">
+                        <img src="./images/quiz_finish.png" alt="テスト終了後の結果画面" class="w-full h-[26rem] md:h-[31rem] object-contain object-top">
+                    </div>
+                    <figcaption class="mt-4 px-1">
+                        <p class="font-medium">テスト結果サマリー</p>
+                        <p class="text-xs text-slate-400 mt-2">正答数と間違えた問題をまとめて表示。復習が必要な歌をすぐに把握できます。</p>
+                        <div class="mt-3 rounded-2xl bg-slate-900/70 border border-slate-700 p-3">
+                            <p class="text-slate-400 text-[11px] mb-1">ポイント</p>
+                            <p class="text-sm font-medium text-blue-300">結果から苦手を振り返る</p>
+                            <p class="text-[11px] text-slate-500 mt-1">次の学習につながる一覧表示</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
 
     <!-- 特徴セクション -->
@@ -139,5 +222,82 @@
         </div>
     </footer>
 
+<script>
+    (() => {
+        const track = document.getElementById('screenshots-carousel');
+        const dotsWrap = document.getElementById('screenshots-dots');
+        if (!track || !dotsWrap) return;
+
+        const slides = Array.from(track.children);
+        let currentIndex = 0;
+
+        const isMobile = () => window.innerWidth < 1024;
+
+        const scrollToIndex = (index, smooth = true) => {
+            currentIndex = Math.max(0, Math.min(index, slides.length - 1));
+            if (!isMobile()) return;
+            track.scrollTo({
+                left: track.clientWidth * currentIndex,
+                behavior: smooth ? 'smooth' : 'auto'
+            });
+            updateUI();
+        };
+
+        const updateUI = () => {
+            dotsWrap.querySelectorAll('button').forEach((dot, i) => {
+                dot.setAttribute('aria-current', i === currentIndex ? 'true' : 'false');
+                dot.className = i === currentIndex
+                    ? 'w-5 h-2 rounded-full bg-green-400 transition'
+                    : 'w-2 h-2 rounded-full bg-slate-600 transition';
+            });
+        };
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.setAttribute('aria-label', `スクリーンショット ${i + 1} を表示`);
+            dot.addEventListener('click', () => scrollToIndex(i));
+            dotsWrap.appendChild(dot);
+        });
+
+        let scrollTimer;
+        let lastScrollAt = 0;
+        track.addEventListener('scroll', () => {
+            if (!isMobile()) return;
+            lastScrollAt = Date.now();
+            window.clearTimeout(scrollTimer);
+            scrollTimer = window.setTimeout(() => {
+                currentIndex = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+                updateUI();
+            }, 80);
+        }, { passive: true });
+
+        track.addEventListener('click', (event) => {
+            if (!isMobile()) return;
+            if (Date.now() - lastScrollAt < 180) return;
+            if (event.target.closest('#screenshots-dots')) return;
+
+            const rect = track.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            if (x > rect.width / 2) {
+                scrollToIndex(currentIndex + 1);
+            } else {
+                scrollToIndex(currentIndex - 1);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            if (!isMobile()) {
+                currentIndex = 0;
+                track.scrollLeft = 0;
+            } else {
+                currentIndex = Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+            }
+            scrollToIndex(currentIndex, false);
+        });
+
+        scrollToIndex(0, false);
+    })();
+</script>
 </body>
 </html>
